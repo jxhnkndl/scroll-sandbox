@@ -1,7 +1,7 @@
 function App() {
   return (
     <div>
-      <h1>SCROLL SANDBOX</h1>
+      <h1 className="text-9xl">SCROLL SANDBOX</h1>
     </div>
   );
 }
