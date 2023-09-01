@@ -1,6 +1,9 @@
-import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll } from 'framer-motion';
+import { useTransform } from 'framer-motion';
+// import { useSpring } from 'framer-motion';
 
-/** useScroll() return value types:
+/** 
+ *  useScroll() return value types:
  *    - scrollX / scrollY: absolute position on page measured in pixels
  *    - scrollXProgress / scrollYProgress: scroll position between two defined offsets
  *      (0 and 1) such as the top and bottom of a parent container
@@ -22,8 +25,8 @@ import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
  *            - could be pixels, percents, viewports, numeric units, etc.
  */
 
-export default function Section() {
-  let { scrollY } = useScroll();
+export default function SectionBasic() {
+  let { scrollYProgress } = useScroll();
 
   // monitor scroll position on y axis
   // start animation with initial value of 0% when user hits 250px down the page
@@ -33,7 +36,7 @@ export default function Section() {
   // monitor scroll position within parent container's top/bottom boundaries
   // start animation with initial value of 0% when user is at top of parent container
   // stop animation with ending value of 20% when user is at bottom of parent container
-  let x = useTransform(scrollY, [0, 1], ['0%', '100%']);
+  let x = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
 
   // add a spring effect to the progress bars
   // let x = useSpring(scrollY);
