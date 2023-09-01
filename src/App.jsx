@@ -1,10 +1,11 @@
+import { motion } from 'framer-motion';
+import heroImg from './assets/parallax-hero.jpg';
+
 // import SectionBasic from "./components/SectionBasic";
 // import SectionCascade from "./components/SectionCascade";
 // import SectionCircle from "./components/SectionCircle";
-import SectionFadeIn from './components/SectionFadeIn';
-
-import { motion } from 'framer-motion';
-import heroImg from './assets/parallax-hero.jpg';
+// import SectionFadeIn from './components/SectionFadeIn';
+import SectionReveal from './components/SectionReveal';
 
 /** BASIC ANIMATIONS
  *  
@@ -44,11 +45,11 @@ export default function App() {
           }}
         />
       </div>
-      <SectionFadeIn />
-      <SectionFadeIn />
-      <SectionFadeIn />
-      <SectionFadeIn />
-      <SectionFadeIn />
+      <SectionReveal />
+      <SectionReveal />
+      <SectionReveal />
+      <SectionReveal />
+      <SectionReveal />
     </div>
   );
 }
